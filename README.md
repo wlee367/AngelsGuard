@@ -23,7 +23,7 @@ In the future, we would like to implement a feature for the security guards. Thi
 3. Textback/call back feature for security guards in applicable situations. 
 
 ## Group Members
-1. Jason Lee (@wlee367)
+1. Jason Lee (Github @ wlee367)
 2. Edwin Finch (edwin@lignite.io)
-3. Annie Liang (annieisshort@gmail.com)
-4. Sangeet Parashar (@sangeetparashar)
+3. Annie Liang (aliang20@schulich.yorku.ca)
+4. Sangeet Parashar (Github @ sangeetparashar)
