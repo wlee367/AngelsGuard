@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Text Your Angel</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" src="../describeyourself/mycss.css">
+    <link rel="stylesheet" src="../createEvent/mycss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else if (response.status === 'not_authorized') {
+                // The person is logged into Facebook, but not your app.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            } else {
+                // The person is not logged into Facebook, so we're not sure if
+                // they are logged into this app or not.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into Facebook.';
+            }
+        }
+
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '478411815662731',
+                cookie: true, // enable cookies to allow the server to access
+                // the session
+                xfbml: true, // parse social plugins on this page
+                version: 'v2.8' // use graph api version 2.8
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/all.js"
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Successful login for: ' + response.name);
+                console.log(JSON.stringify(response));
+                var id = response.id;
+                document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+            });
+        }
+
+        function login() {
+            FB.login(function response() {
+                if (response.status == 'connected') {
+                    document.getElementById('status').innerHTML = 'We are connected';
+                } else if (response.status == 'not_authorized') {
+                    document.getElementById('status').innerHTML = 'We are not Logged in';
+                } else {
+                    document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+                }
+
+            });
+        }
+    </script>
+
+
+    <div id="status"></div>
+    <!-- this is where the website starts. Above should be the script for the facebook api -->
+    <div class="container">
+        <h2>Welcome!</h2>
+        <div class="aboutSite">
+            <p>Hey there! Welcome to Angel Texts. We are a service that aim to provide safety as much as we can at public events and gatherings. Our Goal is to connect you to an authority figure if you or your friend is in danger at a public event/gathering
+                such as a bar or a party or in public spaces so that you can get help immediately.</p>
+            <p>Might be Naive, but at least we're doing something about it</p>
+            <p>On this site, after you log in with Facebook, you can do 3 things:</p>
+
+            <ul>
+                <li>Create a basic profile of yourself (AKA what event you will be attending/what you will be wearing)</li>
+                <li>Create an Event that you are hosting so you can ensure your event is safe</li>
+                <li>Request for help!</li>
+            </ul>
+        </div>
+        <div id="status">
+            <p>You can log in/sign up with your facebook</p>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Details</a>
+        </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+                            <fieldset>
+                                <legend>What're ya rockin'?</legend>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Outfit</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-sunglasses"></i></span>
+                                            <input name="email" placeholder="What are you wearing?" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">A way to distinguish yourself from the crowd </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input name="phone" placeholder="A bit more detail about you" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-success">Update</span></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Events!</a>
+        </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="well form-horizontal" action=" " method="post" id="contact_form">
+                            <fieldset>
+
+                                <!-- Form Name -->
+                                <legend>Create An Event</legend>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Name</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                            <input name="event_name" placeholder="Name of the event" class="form-control" type="text" id="nameInput">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Location</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                            <input name="event_location" placeholder="The place or address where it's poppin'" class="form-control" type="text" id="locationInput">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Description</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input name="description" placeholder="Quick summary of event" class="form-control" type="text" id="descriptionInput">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="durationSection">
+                                    <label class="col-md-4 control-label">Duration</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <p id="datepairStart">
+                                            <input type="text" class="date start" /> to
+                                            <!-- <input type="text" class="time start" /> to -->
+                                            <!-- <div></div> -->
+                                            <input type="text" class="date end" />
+                                            <!-- <input type="text" class="time end" /> -->
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <input type="checkbox" name="infiniteEvent" onclick="infiniteEventCheckedChanged()" id="infiniteEventCheckbox"> This is an infinite event
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group">
+                    <label class="col-md-4 control-label">End</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p id="datepairEnd">
+                            <input type="text" class="date end" />
+                            <input type="text" class="time end" />
+                        </p>
+                    </div>
+                </div> -->
+
+                                <div></div>
+
+                                <!-- Success message -->
+                                <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-success" onclick="createNewEvent()">Create <!--<span class="glyphicon glyphicon-send"></span>--></button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">In trouble</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <button type="button" class="btn btn-danger btn-block">I'm in danger, help please!</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

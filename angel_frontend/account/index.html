@@ -1,0 +1,694 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AngelsGuard.me</title>
+    <link rel="stylesheet" type="text/css" href="style_fuck_.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" src="../describeyourself/mycss.css">
+    <link rel="stylesheet" src="../createEvent/mycss.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="node_modules/timepicker/jquery.timepicker.min.js"></script>
+    <link rel="stylesheet" src="node_modules/timepicker/jquery.timepicker.css"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+
+    <script type="text/javascript" src="datepair.js"></script>
+    <script type="text/javascript" src="jquery.datepair.shit.js"></script>
+
+    <link rel="stylesheet" href="awesomefuck/awesomplete.css"/>
+    <script src="awesomefuck/awesomplete.js" async></script>
+
+</head>
+
+<body>
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else if (response.status === 'not_authorized') {
+                // The person is logged into Facebook, but not your app.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            } else {
+                // The person is not logged into Facebook, so we're not sure if
+                // they are logged into this app or not.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into Facebook.';
+            }
+        }
+
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '182352355576008',
+                cookie: true, // enable cookies to allow the server to access
+                // the session
+                xfbml: true, // parse social plugins on this page
+                version: 'v2.8' // use graph api version 2.8
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/all.js"
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('welcomeTextDiv').innerHTML =
+                    'Welcome, ' + response.name + '!';
+            });
+        }
+
+        function login() {
+            FB.login(function response() {
+                if (response.status == 'connected') {
+                    document.getElementById('status').innerHTML = 'We are connected';
+                } else if (response.status == 'not_authorized') {
+                    document.getElementById('status').innerHTML = 'We are not Logged in';
+                } else {
+                    document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+                }
+
+            });
+        }
+    </script>
+
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
+    <!-- <div id="status"></div> -->
+    <!-- this is where the website starts. Above should be the script for the facebook api -->
+    <div class="container">
+        <!-- <div id="Company">
+            <h1>AngelsGuard.me</h1>
+        </div> -->
+        <div id="welcome">
+            <div id="welcomeTextDiv">Welcome </div>
+        </div>
+
+
+        <div class="subintro">
+            <p id="intro" style="color:#FFF"> We hope you have a safe and fun time out. Below you can manage your AngelsGuard.me account.</p>
+        </div>
+
+        <div id="lineup" style="padding:10px;">
+            <p>What you can do</p>
+        </div>
+
+
+        <div class="supporting" style="padding-top:20px;">
+            <!-- <div class="container"> -->
+                <div class="col">
+                    <div class="nicememe">
+                        <img src="https://cdn1.iconfinder.com/data/icons/unique-round-blue/93/user-512.png">
+                        <h2>Setup Yourself</h2>
+                        <p>Setup a profile describing you so angels can locate you.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="http://portjeff.com/wp-content/uploads/2016/06/event_icon.png">
+                    <h2>Host Events</h2>
+                    <p>Create events that you're hosting & manage angels at the event.</p>
+                </div>
+
+                <div class="col">
+                    <img src="http://www.freeiconspng.com/uploads/helping-hand-icon-png-7.png">
+                    <h2>Get Help</h2>
+                    <p>Request for help from a nearby angel.</p>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- <div id="status">
+        <p>You can log in/sign up with your <span class="facebook">facebook</span></p>
+        <button onclick="login()" id="login">Login </button>
+    </div> -->
+
+    <div class="panel-group" id="accordion" style="padding:20px;">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="padding:30px;">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">In trouble</a>
+        </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <br>
+                    <button type="button" class="btn btn-danger btn-block" style="padding:40px;font-size:25px;" onclick="inDanger()" id="imInDangerButton">I'M IN DANGER</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="padding:30px;">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Details</a>
+        </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="well form-horizontal" action=" " method="post" id="contact_form">
+                        <fieldset>
+                            <legend align="center">Share a bit about yourself</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Outfit</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-sunglasses"></i></span>
+                                        <input placeholder="What are you wearing?" class="form-control" type="text" id="outfitInput">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Text input-->
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">A way to distinguish yourself from the crowd </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input name="phone" placeholder="A bit more detail about you" class="form-control" type="text" id="detailsInput">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Phone number</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                        <input name="email" placeholder="What's your phone number?" class="form-control" type="text" id="phoneNumberInput">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button class="btn btn-success" onclick="updateDetails()">Update</span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="padding:30px;">
+                <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Events</a>
+        </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="well form-horizontal" action=" " method="post" id="contact_form">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend align="center">What are you attending?</legend>
+
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">ID</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                        <input name="event_name" placeholder="ID of the event" class="form-control" type="text" id="eventIdInput">
+                                    </div>
+                                    <br>
+                                    <label>The event ID is a special 6 character ID that your event host should provide to you.</label>
+                                </div>
+                            </div>
+
+
+                            <!-- Success message -->
+                            <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-success" onclick="updateEvent()">Update <!--<span class="glyphicon glyphicon-send"></span>--></button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="well form-horizontal" action=" " method="post" id="createEventDiv">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend align="center">Create an event</legend>
+
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Name</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                        <input name="event_name" placeholder="Name of the event" class="form-control" type="text" id="nameInput">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Location</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                        <input name="event_location" placeholder="The place or address where it's poppin'" class="form-control" type="text" id="locationInput">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Description</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input name="description" placeholder="Quick summary of event" class="form-control" type="text" id="descriptionInput">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="durationSection">
+                                <label class="col-md-4 control-label">Duration</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <p id="datepairStart">
+                                        <input type="text" class="date start" /> to
+                                        <!-- <input type="text" class="time start" /> to -->
+                                        <!-- <div></div> -->
+                                        <input type="text" class="date end" />
+                                        <!-- <input type="text" class="time end" /> -->
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <input type="checkbox" name="infiniteEvent" onclick="infiniteEventCheckedChanged()" id="infiniteEventCheckbox"> This is an infinite event
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group">
+                    <label class="col-md-4 control-label">End</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p id="datepairEnd">
+                            <input type="text" class="date end" />
+                            <input type="text" class="time end" />
+                        </p>
+                    </div>
+                </div> -->
+
+                            <div></div>
+
+                            <!-- Success message -->
+                            <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-success" onclick="createNewEvent()">Create <!--<span class="glyphicon glyphicon-send"></span>--></button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+
+                    <div class="well form-horizontal" action=" " method="post" id="eventCreatedDiv" hidden>
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend align="center">Event created!</legend>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">ID</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                        <input name="event_name" placeholder="" class="form-control" type="text" id="idInput" value="YODAWG" disabled>
+                                    </div>
+                                    <br>
+                                    <label>Share this ID with your guests.</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Add angels</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                        <input name="event_name" placeholder="Type in an angel's name here" class="form-control awesomplete" type="text" id="addAngelInput" data-list="Jackie Donnel, Jason Lee, Jay-Z">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="jasonAngelSection" hidden>
+                                <label class="col-md-4 control-label">#1</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                        <input name="event_name" value="Jason Lee" class="form-control" type="text" disabled>
+                                    </div>
+                                </div>
+                                <a href="#">Remove</a>
+                            </div>
+
+                            <!-- <div class="form-group">
+                    <label class="col-md-4 control-label">End</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p id="datepairEnd">
+                            <input type="text" class="date end" />
+                            <input type="text" class="time end" />
+                        </p>
+                    </div>
+                </div> -->
+
+                            <div></div>
+
+                            <!-- Success message -->
+                            <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-success" onclick="addAngel()">Add Angel <!--<span class="glyphicon glyphicon-send"></span>--></button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+
+<script>
+    var datepairs = [ "datepairStart" ]; //, "datepairEnd" ];
+    for(var i = 0; i < datepairs.length; i++){
+        var datepairName = datepairs[i];
+
+        $('#' + datepairName + ' .time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+
+        $('#' + datepairName + ' .date').datepicker({
+            'format': 'm-d-yyyy',
+            'autoclose': true
+        });
+
+        $('#' + datepairName).datepair();
+    }
+
+    function getParameterByName(name, url) {
+        if (!url) {
+          url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function addAngel(){
+        BootstrapDialog.show({
+            title: "Success",
+            message: "<b>Jason Lee</b> has been added as an angel and will recieve any alerts that may arise during your event via text.",
+            type: BootstrapDialog.TYPE_SUCCESS
+        });
+
+        document.getElementById("addAngelInput").value = "";
+        document.getElementById("jasonAngelSection").hidden = false;
+    }
+
+    function createNewEvent(){
+        console.log("Create event.");
+
+        var name = document.getElementById("nameInput").value;
+        var location = document.getElementById("locationInput").value;
+        var description = document.getElementById("descriptionInput").value;
+
+        var postData = {
+            name: name,
+            location: location,
+            description: description,
+            userID: "jason"
+        };
+
+        console.log("Sending " + JSON.stringify(postData));
+
+        $.post("https://payment.fluentudiscount.com:777/event/create", JSON.stringify(postData), function(data, status){
+            var object = JSON.parse(data);
+            console.log(JSON.stringify(object));
+            if(object.result !== 200){
+                console.log("Server error, it seems: " + object.error);
+
+                BootstrapDialog.show({
+                    title: "Server error",
+                    message: "Sorry my friends for letting you down, the server has failed.\n\nError: " + object.message,
+                    type: BootstrapDialog.TYPE_DANGER
+                });
+            }
+            else{
+                console.log("Good to go, thanks");
+
+                // BootstrapDialog.show({
+                //     title: "Event created",
+                //     message: "Your event has been created! It's unique ID is: <b>" + object.id + "</b>\n\nShare this with your angels and guests so they can add themselves to your event.",
+                //     type: BootstrapDialog.TYPE_SUCCESS
+                // });
+
+                document.getElementById("nameInput").value = "";
+                document.getElementById("locationInput").value = "";
+                document.getElementById("descriptionInput").value = "";
+
+                document.getElementById("idInput").value = object.id;
+
+                document.getElementById("eventCreatedDiv").hidden = false;
+                document.getElementById("createEventDiv").hidden = true;
+            }
+        });
+    }
+
+    function updateEvent(){
+        console.log("Fuck");
+
+        var postData = {
+            eventID: document.getElementById("eventIdInput").value
+        };
+
+        console.log("Sending " + JSON.stringify(postData));
+
+        $.post("https://payment.fluentudiscount.com:777/event/find", JSON.stringify(postData), function(data, status){
+            var object = JSON.parse(data);
+            console.log(JSON.stringify(object));
+            if(object.result !== 200){
+                console.log("Server error, it seems: " + object.message);
+
+                BootstrapDialog.show({
+                    title: "Oh boy",
+                    message: object.error,
+                    type: BootstrapDialog.TYPE_DANGER
+                });
+            }
+            else{
+                BootstrapDialog.show({
+                    title: "You're in!",
+                    message: "You're now a part of event " + object.jevent.name + ". If you have any trouble, tap the danger button twice and an angel at the event will come help you.\n\nEnjoy!",
+                    type: BootstrapDialog.TYPE_SUCCESS
+                });
+            }
+        });
+    }
+
+    var pressesSoFar = 0;
+    function inDanger(){
+        var inDangerButton = document.getElementById("imInDangerButton");
+
+        pressesSoFar++;
+
+        //First press
+        if(pressesSoFar === 1){
+            inDangerButton.innerHTML = "Press again to confirm danger";
+        }
+        //Press again to confirm
+        else{
+            inDangerButton.innerHTML = "An angel will come to guard you!";
+
+            $.post("https://payment.fluentudiscount.com:777/user/danger", JSON.stringify({ "userID":"Annie" }), function(data, status){
+                var object = JSON.parse(data);
+                console.log(JSON.stringify(object));
+                if(object.result !== 200){
+                    return console.error("Spoooook!!!");
+                }
+            });
+
+            pressesSoFar = 0;
+
+            setTimeout(function(){
+                inDangerButton.innerHTML = "I'M IN DANGER";
+            }, 5000);
+        }
+    }
+
+    if(getParameterByName("twilio")){
+        $.post("https://payment.fluentudiscount.com:777/user/get", JSON.stringify({}), function(data, status){
+            var object = JSON.parse(data);
+            console.log(JSON.stringify(object));
+            if(object.result !== 200){
+                return console.error("Spoooook!!!");
+            }
+            else{
+                var outfitInput = document.getElementById("outfitInput");
+                var detailsInput = document.getElementById("detailsInput");
+                var phoneNumberInput = document.getElementById("phoneNumberInput");
+                var welcomeText = document.getElementById("welcomeTextDiv");
+
+                welcomeText.innerHTML = "Welcome " + object.user.userID + "!";
+
+                outfitInput.value = object.user.details.wearing;
+                detailsInput.value = object.user.details.description;
+                phoneNumberInput.value = object.user.phoneNumber || "";
+            }
+        });
+    }
+    else{
+        var outfitInput = document.getElementById("outfitInput");
+        var detailsInput = document.getElementById("detailsInput");
+        var phoneNumberInput = document.getElementById("phoneNumberInput");
+
+            document.getElementById("welcomeTextDiv").innerHTML = "Welcome Jason!";
+
+        outfitInput.value = "Some gangster threads";
+        detailsInput.value = "Gonna smoke any fool that creeps";
+        phoneNumberInput.value = "+12263771048";
+    }
+
+    function updateDetails(){
+        var outfitInput = document.getElementById("outfitInput");
+        var detailsInput = document.getElementById("detailsInput");
+        var phoneNumberInput = document.getElementById("phoneNumberInput");
+
+        var updateObject = {
+            "userID":"Annie",
+            "details": {
+                "wearing": outfitInput.value,
+                "description": detailsInput.value,
+                "photo":""
+            },
+            "phoneNumber":phoneNumberInput.value
+        };
+
+        console.log("Sending " + JSON.stringify(updateObject));
+
+        $.post("https://payment.fluentudiscount.com:777/user/update", JSON.stringify(updateObject), function(data, status){
+            var object = JSON.parse(data);
+            console.log(JSON.stringify(object));
+            if(object.result !== 200){
+                console.log("Server error, it seems: " + object.error);
+
+                BootstrapDialog.show({
+                    title: "Server error",
+                    message: "Sorry my friends for letting you down, the server has failed.\n\nError: " + object.message,
+                    type: BootstrapDialog.TYPE_DANGER
+                });
+            }
+            else{
+                console.log("Good to go, thanks");
+
+                BootstrapDialog.show({
+                    title: "Profile updated",
+                    message: "Your profile's been successfully updated!",
+                    type: BootstrapDialog.TYPE_SUCCESS
+                });
+            }
+        });
+    }
+
+    function infiniteEventCheckedChanged(){
+        var checked = document.getElementById("infiniteEventCheckbox").checked;
+        console.log("Checked " + checked);
+
+        document.getElementById("durationSection").hidden = checked;
+    }
+</script>
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "name": "angel",
+    "version": "0.0.1",
+    "description": "Save yourself from bad people with an Angel",
+    "keywords": ["hype", "train"],
+    "homepage": "",
+    "author": "Edwin Finch <edwin@lignite.io>, Sangeet Parashar <sparasha@uwo.ca>, Jason Lee <wlee367@uwo.ca>",
+    "dependencies": {
+        "mongojs": "*",
+        "twilio": "*"
+    }
+}

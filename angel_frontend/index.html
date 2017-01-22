@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+        if (typeof WebFontConfig === "undefined") {
+            WebFontConfig = new Object();
+        }
+        WebFontConfig['google'] = {
+            families: ['Raleway:900', 'Roboto']
+        };
+
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+    <title>AngelsGuard.me</title>
+
+    <script src="https://use.fontawesome.com/f5c62d8269.js"></script>
+
+    <link rel='stylesheet' id='jquery-style-css' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css?ver=4.5.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-group-css' href='shitpost.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='tooltipster-group-css' href='lukapost.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css-css' href='style.css' type='text/css' media='all' />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='jquery-1.11.1-min.js'></script>
+    <link rel='shortlink' href='https://flyonward.com/' />
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://flyonward.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+    <!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://flyonward.com/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+    <style type="text/css" title="dynamic-css" class="options-output">
+        body {
+            font-family: Raleway;
+            font-weight: normal;
+            font-style: normal;
+            color: #6d7a83;
+            font-size: 18px;
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 0.24s ease-in-out;
+            -moz-transition: opacity 0.24s ease-in-out;
+            transition: opacity 0.24s ease-in-out;
+        }
+
+        .wf-loading body,
+        {
+            opacity: 0;
+        }
+
+        .ie.wf-loading body,
+        {
+            visibility: hidden;
+        }
+
+        .countdown-period,
+        .schedule-wrapper .nav>li>a,
+        .timeline .post-meta,
+        #main-slider .caption-title {
+            font-family: Roboto;
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 0.24s ease-in-out;
+            -moz-transition: opacity 0.24s ease-in-out;
+            transition: opacity 0.24s ease-in-out;
+        }
+
+        .wf-loading .countdown-period,
+        .schedule-wrapper .nav>li>a,
+        .timeline .post-meta,
+        #main-slider .caption-title,
+        {
+            opacity: 0;
+        }
+
+        .ie.wf-loading .countdown-period,
+        .schedule-wrapper .nav>li>a,
+        .timeline .post-meta,
+        #main-slider .caption-title,
+        {
+            visibility: hidden;
+        }
+
+        #main-slider .caption-subtitle,
+        #main-slider .countdown-amount {
+            font-family: Raleway;
+            font-weight: 900;
+            font-style: normal;
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 0.24s ease-in-out;
+            -moz-transition: opacity 0.24s ease-in-out;
+            transition: opacity 0.24s ease-in-out;
+        }
+
+        .wf-loading #main-slider .caption-subtitle,
+        #main-slider .countdown-amount,
+        {
+            opacity: 0;
+        }
+
+        .ie.wf-loading #main-slider .caption-subtitle,
+        #main-slider .countdown-amount,
+        {
+            visibility: hidden;
+        }
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1454003941381 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            background-image: url(background.png) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1442310097688 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310110885 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310123794 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310146468 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310166709 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 0px !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1442310174556 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 30px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310187724 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1442310194671 {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+        }
+
+        .vc_custom_1417507329606 {
+            padding-bottom: 0px !important;
+        }
+
+        .vc_custom_1417501673381 {
+            padding-bottom: 40px !important;
+        }
+
+        .vc_custom_1442309493423 {
+            margin-bottom: 15px !important;
+        }
+    </style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+    <script type="text/javascript">
+        var currentlang = "en";
+    </script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="home page page-id-139 page-template page-template-home_template page-template-home_template-php body-light wide ltr  wpb-js-composer js-comp-ver-4.11.2.1 vc_responsive">
+
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else if (response.status === 'not_authorized') {
+                // The person is logged into Facebook, but not your app.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            } else {
+                // The person is not logged into Facebook, so we're not sure if
+                // they are logged into this app or not.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into Facebook.';
+            }
+        }
+
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '182352355576008',
+                cookie: true, // enable cookies to allow the server to access
+                // the session
+                xfbml: true, // parse social plugins on this page
+                version: 'v2.8' // use graph api version 2.8
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/all.js"
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Successful login for: ' + response.name);
+                document.getElementById('welcomeTextDiv').innerHTML =
+                    'Welcome, ' + response.name + '!';
+            });
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) {
+              url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function login() {
+            document.location = getParameterByName("twilio") ? "https://www.angelsguard.me/account/?twilio=true" : "https://www.angelsguard.me/account";
+
+            // FB.login(function response() {
+            //     if (response.status == 'connected') {
+            //         document.getElementById('status').innerHTML = 'We are connected';
+            //     } else if (response.status == 'not_authorized') {
+            //         document.getElementById('status').innerHTML = 'We are not Logged in';
+            //     } else {
+            //         document.getElementById('status').innerHTML = 'You are not logged into Facebook';
+            //     }
+            //
+            // });
+        }
+    </script>
+
+    <!-- Preloader -->
+
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Wrap all content -->
+    <div class="wrapper container_boxed">
+
+
+        <!-- Header -->
+        <header class="header fixed">
+            <div class="container">
+                <div class="header-wrapper clearfix">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="https://www.angelsguard.me/" title="AngelsGuard.me" class="scroll-to">
+                            AngelsGuard.me </a>
+                    </div>
+                    <!-- /Logo -->
+
+                    <!-- Navigation -->
+                    <div id="mobile-menu"></div>
+                    <nav class="navigation closed clearfix">
+                        <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+                        <ul id="menu-one-page-menu" class="sf-menu nav">
+                            <li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"><a href="#home">Home</a></li>
+                            <li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="#about">About</a></li>
+                            <li id="menu-item-792" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-792"><a href="#contact">Contact</a></li>
+                            <!-- <li id="menu-item-1149-de" class="lang-item lang-item-38 lang-item-de menu-item menu-item-type-custom menu-item-object-custom menu-item-1149-de">
+                                <a href="https://flyonward.com/de/" hreflang="de-DE" lang="de-DE"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYvTxcWb4+53h3z8GZpZff/79+v3n/7/fDAz/GHAAgABi+f37e3FxOZD1Dwz+/v3z9y+E/AMFv3//+Qumfv9et241QACxMDExAVWfOHkJJAEW/gUEP0EQDn78+AHE/gFOQJUAAcQiy8Ag8O+fLFj1n1+/QDp+/gQioK7fP378+vkDqOH39x9A/RJ/gE5lAAhAYhzcAACCQBDkgRXRjP034R0IaDTZTFZn0DItot37S94KLOINerEcI7aKHAHE8v/3r/9//zIA1f36/R+o4tevf1ANYNVA9P07RD9IJQMDQACxADHD3z8Ig4GMHz+AqqHagKp//fwLVA0U//v7LwMDQACx/LZiYFD7/5/53/+///79BqK/EMZ/UPACSYa/v/8DyX9A0oTxx2EGgABi+a/H8F/m339BoCoQ+g8kgRaCQvgPJJiBYmAuw39hxn+uDAABxMLwi+E/0PusRkwMvxhBGoDkH4b/v/+D2EDyz///QB1/QLb8+sP0lQEggFh+vGXYM2/SP6A2Zoaf30Ex/J+PgekHwz9gQDAz/P0FYrAyMfz7wcDAzPDtFwNAgAEAd3SIyRitX1gAAAAASUVORK5CYII="
+                                        title="Deutsch" alt="Deutsch" /></a>
+                            </li>
+                            <li id="menu-item-1149-fr" class="lang-item lang-item-82 lang-item-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-1149-fr">
+                                <a href="https://flyonward.com/fr/" hreflang="fr-FR" lang="fr-FR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII="
+                                        title="Français" alt="Français" /></a>
+                            </li>
+                            <li id="menu-item-1149-es" class="lang-item lang-item-93 lang-item-es menu-item menu-item-type-custom menu-item-object-custom menu-item-1149-es">
+                                <a href="https://flyonward.com/es/" hreflang="es-ES" lang="es-ES"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFnSURBVHjaYvzPgAD/UNlYEUAAmuTYAAAQhAEYqF/zFbe50RZ1cMmS9TLi0pJLRjZohAMTGFUN9HdnHgEE1sDw//+Tp0ClINW/f0NIKPoFJH/9//ULyGaUlQXaABBALAx/Gf4zAt31F4i+ffj3/cN/XrFfzOx//v///f//LzACM/79ZmD8/e8TA0AAMYHdDVT958vXP38nMDB0s3x94/Tj5y+YahhiAKLfQKUAAcQEdtJfoDHMF2L+vPzDmFXLelf551tGFOOhev4A/QgQQExgHwAd8IdFT/Wz6j+GhlpmXSOW/2z///8Eq/sJ18Dw/zdQA0AAMQExxJjjdy9x2/76EfLz4MXdP/i+wsyGkkA3Aw3984cBIIAYfzIwMKel/bt3jwEaLNAwgZIQxp/fDH/+MqqovL14ESCAWICeZvr9h0FSEhSgwBgAygFDEMT+wwAhgQgc4kAEVAwQQIxfUSMSTxxDAECAAQAJWke8v4u1tAAAAABJRU5ErkJggg=="
+                                        title="Español" alt="Español" /></a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                    <!-- /Navigation -->
+
+                </div>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- Content area-->
+        <div class="content-area">
+
+            <section class="page-section vc_row wpb_row vc_row-fluid vc_custom_1454003941381 " id=home>
+                <div class="container">
+                    <div class="row">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner vc_custom_1417507329606">
+                                <div class="wpb_wrapper">
+                                    <div id="main-slider" data-loop="false" data-auto_slider="true" data-duration="3000" data-navigation="false" class="owl-carousel owl-theme ">
+                                        <div class="item page text-center slide0">
+                                            <div class="caption">
+
+                                                <div class="div-table">
+                                                    <div class="div-cell">
+                                                        <h1 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>Be guarded by angels</span></h1>
+                                                        <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300">Sign up easily with with Facebook</h3>
+                                                        <p class="caption-text">
+                                                            <button class="btn btn-theme btn-theme-xl" data-animation="flipInY" data-animation-delay="600" onclick="login()">Sign up/sign in&nbsp;<i class="fa fa-arrow-circle-right"></i></button>
+                                                        </p>
+                                                        <div id="status">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-description ">
+                                        <div class="event-background" style="background-color:#0d1d31">
+                                            <div class="container-fluid">
+                                                <div class="row">
+
+                                                    <div class="col-md-3">
+                                                        <div class="media ">
+                                                            <span class="pull-left">
+                              <i class="fa fa-users fa-2x"></i>
+                          </span>
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading">Host events</h4>
+                                                                <span>Protect your guests</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="media ">
+                                                            <span class="pull-left">
+                              <i class="fa fa-thumbs-o-up fa-2x"></i>
+                          </span>
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading">Trusted system</h4>
+                                                                <span>Feel secure at any event</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="media ">
+                                                            <span class="pull-left">
+                              <i class="fa fa-user-secret fa-2x"></i>
+                          </span>
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading">Discreetly get help</h4>
+                                                                <span>Only alert angels of your trouble</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="media ">
+                                                            <span class="pull-left">
+                              <i class="fa fa-check fa-2x"></i>
+                          </span>
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading">Easy to use</h4>
+                                                                <span>One signup, one button for help</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+
+            <section class="page-section vc_row wpb_row vc_row-fluid vc_custom_1442310097688 " id=about>
+                <div class="container">
+                    <div class="row">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner vc_custom_1417501673381">
+                                <div class="wpb_wrapper">
+                                    <h1 class="section-title ">
+          <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-question fa-stack-1x"></i></span></span>
+          <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">WHAT DOES THIS SERVICE DO?</span>
+      </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-12 vc_col-md-12">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_text_column wpb_content_element  vc_custom_1442309493423">
+                                        <div class="wpb_wrapper">
+                                            <p data-animation="fadeInUp" data-animation-delay="300">We understand going out to an event by yourself can be frightening, with the possibility of someone being creepy, harmful or just annoying.</p>
+                                            <p data-animation="fadeInUp" data-animation-delay="300">Our service allows you to guard yourself with "angels", dedicated people at events who are willing to help you at the touch of a button.</p>
+                                            <p data-animation="fadeInUp" data-animation-delay="300">If you ever feel in danger, annoyed, or some other kind of safety related help, discreetly with the press of a button someone will be by your side for you.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+        <section class="page-section vc_row wpb_row vc_row-fluid color vc_custom_1442310194671 " id=contact>
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <h1 class="section-title ">
+            <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-send fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">Contact Us <small>/ Ask us anything</small></span>
+        </h1>
+                                <p>If you have any questions, comments, or want to contact us for any other reason, simply <a href="mailto:edwin@lignite.io">send us an email.</a><br><br></p>
+                                <div class="col-sm-12 af-outer af-required text-center form-group af-inner">
+                                    <button type="submit" value="Send us an email" class="wpcf7-form-control wpcf7-submit form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" onclick="sendEmail()">Send us an email</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- /FOOTER -->
+
+        <div class="to-top"><i class="fa fa-angle-up"></i></div>
+
+    </div>
+    <!-- /wrapper -->
+    </div>
+
+    <script>
+    function signin(){
+
+    }
+    </script>
+
+    <!-- /content-area -->
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var _wpcf7 = {
+            "loaderUrl": "https:\/\/flyonward.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+            "recaptchaEmpty": "Please verify that you are not a robot.",
+            "sending": "Sending ...",
+            "cached": "1"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://flyonward.com/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js,wp-content/plugins/contact-form-7/includes/js/scripts.js,wp-content/themes/flyonward/assets/plugins/modernizr.custom.js,wp-content/themes/flyonward/assets/plugins/bootstrap/js/bootstrap.min.js,wp-content/themes/flyonward/assets/plugins/bootstrap-select/bootstrap-select.min.js,wp-content/themes/flyonward/assets/plugins/superfish/js/superfish.js,wp-content/themes/flyonward/assets/plugins/prettyphoto/js/jquery.prettyPhoto.js,wp-content/themes/flyonward/assets/plugins/placeholdem.min.js,wp-content/themes/flyonward/assets/plugins/jquery.smoothscroll.min.js,wp-content/themes/flyonward/assets/plugins/jquery.easing.min.js'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var ajax_object = {
+
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://flyonward.com/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/flyonward/assets/plugins/jquery.tooltipster.min.js,wp-content/themes/flyonward/assets/plugins/owlcarousel2/owl.carousel.min.js,wp-content/themes/flyonward/assets/plugins/countdown/jquery.plugin.min.js,wp-content/themes/flyonward/assets/js/parallax_theme.js,wp-content/themes/flyonward/assets/js/register_event.js,wp-content/themes/flyonward/assets/js/theme.js,wp-content/themes/flyonward/assets/js/custom.js,wp-includes/js/jquery/ui/core.min.js,wp-includes/js/jquery/ui/datepicker.min.js,wp-content/themes/flyonward/assets/plugins/jquery.ui.timepicker.js'></script>
+    <script type='text/javascript' src='https://flyonward.com/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=4.11.2.1'></script>
+    <script type='text/javascript' src='https://flyonward.com/wp-content/plugins/bwp-minify/min/?f=wp-content/themes/flyonward/assets/js/theme-init.js,wp-includes/js/wp-embed.min.js,wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js'></script>
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script> -->
+
+</body>
+
+</html>
