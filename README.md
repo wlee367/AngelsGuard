@@ -8,6 +8,9 @@ In a perfect world, this is a discrete way to facilitate responses from the secu
 
 In the future, we would like to implement a feature for the security guards. This feature would allow security guards to text the Twilio number back, and this would send the message through the server and to the web app and the user would have more options to text back.
 
+## Video Demo:
+https://www.youtube.com/watch?v=tW5TmxMhtCU
+
 ## Languages/Frameworks used
 1. Node.Js (do we really need to say more?)
 2. Twilio API 
@@ -16,9 +19,6 @@ In the future, we would like to implement a feature for the security guards. Thi
 5. Javascript
 6. MongoDB 
 7. Facebook Login API()
-
-## Video Demo:
-https://www.youtube.com/watch?v=tW5TmxMhtCU
 
 ## Future Plans for AngelsGuard
 1. Implement Facial Recognition and GPS Tracking to help locate guests
