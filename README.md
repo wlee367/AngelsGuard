@@ -17,6 +17,9 @@ In the future, we would like to implement a feature for the security guards. Thi
 6. MongoDB 
 7. Facebook Login API()
 
+## Video Demo:
+https://www.youtube.com/watch?v=tW5TmxMhtCU
+
 ## Future Plans for AngelsGuard
 1. Implement Facial Recognition and GPS Tracking to help locate guests
 2. Add a feature in which if an angel in the event location or the closest angel cannot be contacted, the police will be notified to arrive
